@@ -77,11 +77,8 @@
 		B21CC8A11B21D45400A99FAC /* StanfordCalculator */ = {
 			isa = PBXGroup;
 			children = (
-				B21CC8A41B21D45400A99FAC /* AppDelegate.swift */,
 				B21CC8A61B21D45400A99FAC /* ViewController.swift */,
 				B21CC8A81B21D45400A99FAC /* Main.storyboard */,
-				B21CC8AB1B21D45400A99FAC /* Images.xcassets */,
-				B21CC8AD1B21D45400A99FAC /* LaunchScreen.xib */,
 				B21CC8A21B21D45400A99FAC /* Supporting Files */,
 			);
 			path = StanfordCalculator;
@@ -90,6 +87,9 @@
 		B21CC8A21B21D45400A99FAC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B21CC8A41B21D45400A99FAC /* AppDelegate.swift */,
+				B21CC8AB1B21D45400A99FAC /* Images.xcassets */,
+				B21CC8AD1B21D45400A99FAC /* LaunchScreen.xib */,
 				B21CC8A31B21D45400A99FAC /* Info.plist */,
 			);
 			name = "Supporting Files";
