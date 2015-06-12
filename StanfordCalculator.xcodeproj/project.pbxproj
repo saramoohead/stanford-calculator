@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B20C25EE1B29BB7F00EF0D14 /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20C25ED1B29BB7F00EF0D14 /* CalculatorBrain.swift */; };
 		B21CC8A51B21D45400A99FAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21CC8A41B21D45400A99FAC /* AppDelegate.swift */; };
 		B21CC8A71B21D45400A99FAC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21CC8A61B21D45400A99FAC /* ViewController.swift */; };
 		B21CC8AA1B21D45400A99FAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B21CC8A81B21D45400A99FAC /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B20C25ED1B29BB7F00EF0D14 /* CalculatorBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
 		B21CC89F1B21D45400A99FAC /* StanfordCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StanfordCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B21CC8A31B21D45400A99FAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B21CC8A41B21D45400A99FAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 		B21CC8A21B21D45400A99FAC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B20C25ED1B29BB7F00EF0D14 /* CalculatorBrain.swift */,
 				B21CC8A41B21D45400A99FAC /* AppDelegate.swift */,
 				B21CC8AB1B21D45400A99FAC /* Images.xcassets */,
 				B21CC8AD1B21D45400A99FAC /* LaunchScreen.xib */,
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B20C25EE1B29BB7F00EF0D14 /* CalculatorBrain.swift in Sources */,
 				B21CC8A71B21D45400A99FAC /* ViewController.swift in Sources */,
 				B21CC8A51B21D45400A99FAC /* AppDelegate.swift in Sources */,
 			);
@@ -411,6 +415,7 @@
 				B21CC8C01B21D45400A99FAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B21CC8C11B21D45400A99FAC /* Build configuration list for PBXNativeTarget "StanfordCalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +424,7 @@
 				B21CC8C31B21D45400A99FAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -13,7 +13,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var display: UILabel!
     
     var userIsInTheMiddleOfTypingANumber = false
-
+    var userHasEnteredAFloatingPoint = false
+    var brain = CalculatorBrain()
+    
     @IBAction func appendDigit(sender: UIButton) {
         let digit = sender.currentTitle!
         if userIsInTheMiddleOfTypingANumber {
@@ -24,8 +26,6 @@ class ViewController: UIViewController {
         }
     }
     
-    var userHasEnteredAFloatingPoint = false
-    
     @IBAction func appendFloatingPoint(sender: UIButton) {
         if !userHasEnteredAFloatingPoint {
             display.text = display.text! + sender.currentTitle!
@@ -34,41 +34,26 @@ class ViewController: UIViewController {
     }
 
     @IBAction func operate(sender: UIButton) {
-        let operation = sender.currentTitle!
         if userIsInTheMiddleOfTypingANumber {
             enter()
         }
-        switch operation {
-            case "×": performOperation { $0 * $1 }
-            case "÷": performOperation { $1 / $0 }
-            case "+": performOperation { $0 + $1 }
-            case "−": performOperation { $1 - $0 }
-            case "√": performOperation { sqrt($0) }
-            default: break
+        if let operation = sender.currentTitle {
+            if let result = brain.performOperation(operation) {
+                displayValue = result
+            } else {
+                displayValue = 0
+            }
         }
     }
-    
-    func performOperation(operation: (Double, Double) -> Double) {
-        if internalStackOfNumbers.count >= 2 {
-            displayValue = operation(internalStackOfNumbers.removeLast(), internalStackOfNumbers.removeLast())
-            enter()
-        }
-    }
-    
-    private func performOperation(operation: Double -> Double) {
-        if internalStackOfNumbers.count >= 1 {
-            displayValue = operation(internalStackOfNumbers.removeLast())
-            enter()
-        }
-    }
-    
-    var internalStackOfNumbers = Array<Double>()
 
     @IBAction func enter() {
         userIsInTheMiddleOfTypingANumber = false
         userHasEnteredAFloatingPoint = false
-        internalStackOfNumbers.append(displayValue)
-        println("internalStack = \(internalStackOfNumbers)")
+        if let result = brain.pushOperand(displayValue) {
+            displayValue = result
+        } else {
+            displayValue = 0
+        }
     }
     
     var displayValue: Double {
